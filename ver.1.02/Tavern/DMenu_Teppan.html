@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麺工房 六車-むぐるま-</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+    <header>
+        <img src="../lmageSave/signboard.jpg" alt="Signboard" width="1000">  
+        <div class="nav-container">
+            <br>
+            <nav>
+             <a href="居酒屋.html">当店について</a>
+    	     <a href="LunchMenu.html">昼メニュー</a>
+    	     <a href="Dinnermenu.html">夜メニュー</a>
+            </nav>
+            <br>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <menu-tag>
+        <a href="DMenu_Single.html">
+            <img src="../lmageSave/Single.jpg" alt="サンプル画像" style="width:100px; height:auto;">
+        </a>
+        <a href="DMenu_Fried.html">
+            <img src="../lmageSave/Fried.jpg" alt="サンプル画像" style="width:100px; height:auto;">
+        </a>
+    
+        <a href="DMenu_Salad.html">
+            <img src="../lmageSave/Salad.jpg" alt="サンプル画像" style="width:100px; height:auto;">
+        </a>
+        <a href="DMenu_Dessert.html">
+            <img src="../lmageSave/Dessert.jpg" alt="サンプル画像" style="width:100px; height:auto;">
+        </a>
+        <a href="DMenu_Drink.html">
+            <img src="../lmageSave/Drink.jpg" alt="サンプル画像" style="width:100px; height:auto;">
+        </a>
+    </menu-tag>    
+    <menu-tag>
+    <h1>鉄板</h1>
+    </menu-tag>
+    <!-- テーブル表示エリア -->
+
+    <!-- CSV1用のテーブル -->
+    <menu-tag>
+        <img src="../lmageSave/Teppan1.jpg" alt="画像" style="width:600px; height:auto;">
+        <img src="../lmageSave/Teppan2.jpg" alt="画像" style="width:600px; height:auto;">
+    </menu-tag>
+
+    <script src="script.js"></script>
+    <script>
+        // 関数を実行して複数CSVを表示
+        loadCSVAndDisplay('../編集用/LunchMenu.csv', 'table1'); // CSV1
+    </script>
+</body>
+</html>

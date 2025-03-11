@@ -1,0 +1,2 @@
+﻿lunch1.jpg,Single1.jpg,Fried1.jpg,Teppan1.jpg,Salad1.jpg,Dessert1.jpg,drink1.jpg
+lunch2.jpg,,Fried2.jpg,Teppan2.jpg,,,drink2.jpg
