@@ -1,0 +1,33 @@
+
+
+
+https://hakuzyo-setuna.github.io/Azikoubou_Muguruma/ver.1.03/Tavern/StyleSheet.css
+
+
+ent="0;url=ver.1.03/Tavern/居酒屋.html">
+
+
+"refresh" content="0;url=ver.1.03/Tavern/居酒屋.html">
+
+
+../Tavern/
+
+
+"StyleSheet.css"
+
+ref="StyleSheet.css">
+
+leSheet.css">
+
+DMenu_Dessert_Single.html
+
+
+
+
+ <meta name="description" content="あなたのサイトの簡単な説明。検索されやすいキーワードを含める。">
+
+
+ヘッダー修正
+リンク修正mをMに
+CSS修正文字をデカいにする
+ボリューミー,ランチの下に写真
