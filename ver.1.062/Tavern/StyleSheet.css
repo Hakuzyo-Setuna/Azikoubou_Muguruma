@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* 擬似要素の基準点 */
+    background-color: 	#EE7700;
+}
+
+body::before {
+    content: "";
+    background: url('../lmageSave/backGround.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center 300px; 
+    opacity: 0.5; /* 透明度を設定（0 = 完全透明, 1 = 完全不透明） */
+    position:  fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 背景レイヤーを下に配置 */
+}
+        /* コンテナのスタイル */
+        .image-grid {
+            display: grid; /* グリッドレイアウトを使用 */
+            grid-template-columns: repeat(2, 1fr); /* 横に2列 */
+            gap: 10px; /* 画像間のスペース */
+            max-width: 600px; /* 最大幅を設定（任意） */
+            margin: 0 auto; /* 中央寄せ */
+            transform: translateX(-120px); /* 左に20px移動 */
+        }
+
+        /* 画像のスタイル */
+        .image-grid img {
+            width: 100%; /* 画像をセルの幅に合わせる */
+            height: auto; /* アスペクト比を維持 */
+            border-radius: 8px; /* 角を丸くする（オプション） */
+        }
+        
+/* コンテンツ部分 */
+.content {
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+        /* ヘッダー全体のスタイル */
+header {
+    text-align: center;
+    padding: 0px 0px;
+    background-color: #fff;
+    color: white;
+}
+
+/* 店名や画像のスタイル */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+header img {
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ナビゲーション全体のスタイル */
+.nav-container {
+    margin: 0; /* 余白をリセット */
+    padding: 0; /* 余計な内側のスペースをリセット */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column; /* ナビゲーションを縦に積む */
+    align-items: center;
+    background-color: #444;
+    z-index: 1000;
+    position: absolute; /* 最初は固定しない */
+    top: 230px; /* 店名画像の下に表示 */
+}
+
+.nav-container nav {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 15px; /* ボタン間のスペース */
+    padding: 10px;
+}
+
+/* 上段のナビゲーション */
+.nav-container nav:first-of-type a {
+    font-size: 1.5rem; /* 上段の文字サイズを大きく */
+    padding: 12px 20px; /* 上段のリンクに広めのパディング */
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* 各リンクを均等に広げる */
+    text-align: center;
+}
+
+.nav-container nav:first-of-type a:hover {
+    background-color: #777;
+}
+
+/* 下段のナビゲーション */
+.nav-container nav:last-of-type a {
+    font-size: 1rem; /* 下段の文字サイズを小さく */
+    padding: 8px 12px; /* 下段のリンクに小さめのパディング 8px 12px;*/
+    background-color: #666;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* 各リンクを均等に広げる */
+    text-align: center;
+}
+
+.nav-container nav:last-of-type a:hover {
+    background-color: #888;
+}
+
+/* スクロール時にナビゲーション固定 */
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #555;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .nav-container nav {
+        flex-wrap: wrap; /* リンクが2段に折り返される */
+    }
+
+    .nav-container nav a {
+        flex-grow: unset; /* 均等な広がりを解除 */
+        width: calc(50% - 15px); /* 画面幅に応じてリンク幅を調整 */
+        margin-bottom: 10px; /* 2行目に隙間を追加 */
+    }
+}
+
+.menu-image {
+    width: 150px;   /* 横幅を150pxに固定 */
+    height: auto;   /* 縦横比を維持 */
+    border-radius: 10px; /* 角丸にしたい場合 */
+}
+
+table {
+    width: 100%; /* テーブルの幅を100%に拡大 */
+    table-layout: fixed; /* 列の幅を均等に設定 */
+    font-size: 20px; /* 全体のフォントサイズを20pxに設定 */
+}
+
+td {
+    padding: 10px; /* セル内の余白を増やす */
+    text-align: center; /* テキストを中央揃え */
+    font-size: 22px; /* ヘッダー部分の文字をさらに大きく */
+    font-weight: bold; /* 太字にする */
+}
+
+th {
+    padding: 10px; /* セル内の余白を増やす */
+    text-align: center; /* テキストを中央揃え */
+    font-size: 22px; /* ヘッダー部分の文字をさらに大きく */
+    font-weight: bold; /* 太字にする */
+}
+
+menu-tag {
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    gap: 10px; /* 画像間の間隔 */
+    font-size: 16px; /* 文字のサイズを32pxに */
+    
+}
+
+Explanation-tag {
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+    align-items: center; /* 中央寄せ */
+    text-align: center; /* テキストを中央寄せ */
+    gap: 5px; /* 行間を調整 */
+    font-size: 24px;
+    margin: 5px 0;
+}
+Summary-tag {
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+    align-items: center; /* 中央寄せ */
+    text-align: left; /* テキストを中央寄せ */
+    gap: 5px; /* 行間を調整 */
+    font-size: 24px;
+    margin: 5px 0;
+}
+DayExp-tag {
+    display: flex;
+    justify-content: flex-end; /* 横方向で右寄せ */
+    align-items: center;       /* 縦方向で中央寄せ（必要なら） */
+    gap: 5px; /* 行間を調整 */
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* 画像の基本スタイル */
+.image-container {
+    display: flex; /* 横並びにする */
+    flex-wrap: wrap; /* はみ出したら折り返し */
+    gap: 10px; /* 画像の間隔 */
+    justify-content: center; /* 中央揃え */
+    padding: 20px; /* 余白 */
+}
+.image-container img {
+    width: 600px; /* 画像の横幅 */
+    height: auto; /* 縦幅は自動調整 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 影をつける */
+    transition: transform 0.2s ease-in-out; /* ホバー時のアニメーション */
+}
+
+/* 画像の基本スタイル */
+.Daily-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ← 4列にする */
+    gap: 10px; /* 画像の間隔 */
+    justify-content: center; /* 中央揃え */
+    padding: 20px; /* 余白 */
+}
+.Daily-container img {
+    width: 300px; /* 画像の横幅 */
+    height: auto; /* 縦幅は自動調整 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 影をつける */
+    transition: transform 0.2s ease-in-out; /* ホバー時のアニメーション */
+}
+
+/* 画像の基本スタイル */
+.Rec-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ← 3列にする */
+    gap: 10px; /* 画像の間隔 */
+    justify-content: center; /* 中央揃え */
+    padding: 20px; /* 余白 */
+}
+.Rec-container img {
+    width: 400px; /* 画像の横幅 */
+    height: auto; /* 縦幅は自動調整 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 影をつける */
+    transition: transform 0.2s ease-in-out; /* ホバー時のアニメーション */
+}
+/*.image-container img:hover {
+    transform: scale(1.1);  マウスホバーで拡大 
+}*/
+/* 外枠で中央寄せ */
+.wrapper {
+    display: flex;
+    justify-content: center; /* 横中央に */
+}
