@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #EE7700;
+}
+
+body::before {
+    content: "";
+    background: url('../lmageSave/backGround.png') no-repeat center center;
+    background-size: cover;
+    background-position: center 300px; 
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 横に2列 */
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;  /* 適切な最大幅 */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+    background-color: #fff;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+header img {
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444;
+    z-index: 1000;
+
+    /* 以下を削除 or コメントアウト */
+    /* position: absolute; */
+    /* top: 220px; */
+}
+
+.nav-container nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-container nav:first-of-type a,
+.nav-container nav:last-of-type a {
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.nav-container nav:first-of-type a {
+    font-size: 1.5rem;
+    background-color: #555;
+    flex-grow: 1;
+}
+.nav-container nav:first-of-type a:hover {
+    background-color: #777;
+}
+
+.nav-container nav:last-of-type a {
+    font-size: 1rem;
+    background-color: #666;
+    flex-grow: 1;
+}
+.nav-container nav:last-of-type a:hover {
+    background-color: #888;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #555;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        transform: translateX(0);
+        max-width: 90%;
+    }
+
+    .nav-container nav {
+        flex-wrap: nowrap;               /* 折り返さない */
+        overflow-x: auto;                /* 横スクロール可 */
+        white-space: nowrap;            /* 改行しない */
+        justify-content: flex-start;    /* 左詰め */
+        gap: 10px;                       /* 間隔 */
+        -webkit-overflow-scrolling: touch; /* iOSで滑らかに */
+        scrollbar-width: none;          /* Firefoxでスクロールバー非表示 */
+    }
+
+    .nav-container nav::-webkit-scrollbar {
+        display: none; /* Chrome/Safariでスクロールバー非表示 */
+    }
+
+    .nav-container nav a {
+        flex-shrink: 0;     /* 押しつぶされないように */
+        width: auto;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    .content {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .menu-image {
+        width: 100px;
+    }
+
+    .image-container img,
+    .Daily-container img,
+    .Rec-container img {
+        width: 100%;
+    }
+
+    .Daily-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Rec-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+.menu-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 20px;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+menu-tag {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.MenuImage-tag {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 常に5列に固定 */
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.MenuImage-tag img {
+    width: 100%;        /* 各セルの幅に合わせて縮小 */
+    height: auto;
+    display: block;
+}
+
+
+Explanation-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+Summary-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 5px;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+DayExp-tag {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-container img {
+    width: calc((100% - 10px) / 2); /* 2列＋gap考慮 */
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Dailyコンテナ：4列固定 */
+.Daily-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Daily-container img {
+    width: calc((100% - 30px) / 4); /* 4列でgap3つ分(10px*3) */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Recコンテナ：3列固定 */
+.Rec-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Rec-container img {
+    width: calc((100% - 20px) / 3); /* 3列でgap2つ分 */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.responsive-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+}
